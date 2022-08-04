@@ -13,9 +13,9 @@ import MuiAlert from '@mui/material/Alert'
 import type { SnackbarOrigin } from '@mui/material/Snackbar'
 import Snackbar from '@mui/material/Snackbar'
 import classnames from 'clsx'
-import { BsPen } from 'react-icons/bs'
 import { useRouter } from 'next/router'
 import React, { forwardRef, useContext, useEffect, useState } from 'react'
+import { BsPen } from 'react-icons/bs'
 
 interface Notice {
   message: string
@@ -109,7 +109,7 @@ const RegisterFrom: NextPage = () => {
       <form method="post" className={classnames(Styles.inputForm, 'body')} onSubmit={handleRegister}>
         <p className={Styles.title}>
           <BsPen />
-          <p> {btn.register}</p>
+          <p> {btn.buy}</p>
         </p>
         <div className={Styles.groupInput}>
           <Box width={'100%'} flexDirection="column" display={'flex'} gap={'20px'}>
@@ -204,7 +204,7 @@ const RegisterFrom: NextPage = () => {
           label={register_page.agreeTerms}
         />
         <button className={Styles.btnRegister} type="submit">
-          {btn.register}
+          {btn.buy}
         </button>
       </form>
       <Footer />

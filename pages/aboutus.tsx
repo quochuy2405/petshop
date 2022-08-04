@@ -1,11 +1,8 @@
 /* eslint-disable @next/next/link-passhref */
-import { Footer, Header, ListCourse, Metadata } from '@/components'
+import { Footer, Header, Metadata } from '@/components'
 import { getLanguage } from '@/i18-next'
-import teacher from '@/public/imgquynh.png'
-import Styles from '@/styles/pages/index.module.scss'
 import type { Course } from '@/types/interface'
 import type { NextPage } from '@/types/next'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 const listCourse: Array<Course> = []
 
