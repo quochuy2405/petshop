@@ -1,0 +1,55 @@
+/*
+ *  Breakpoints
+ */
+
+$breakpoints: (
+  'sm-1': (
+    max-width: 320px
+  ),
+  'sm': (
+    max-width: 640px
+  ),
+  'md': (
+    max-width: 768px
+  ),
+  'lg': (
+    max-width: 1024px
+  ),
+  'xl': (
+    max-width: 1280px
+  )
+) !default;
+
+@mixin responsive($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin button_hightContrast($colorBase, $colorToLeft, $height) {
+  background-color: $colorBase;
+  line-height: $height;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px $colorBase;
+  margin: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(to right, $colorBase 50%, $colorToLeft 0%) left;
+  background-color: $colorBase;
+  background-size: 200%;
+  transition: all linear 0.2s;
+  &:hover {
+    background-position: 100%;
+    transition: all linear 0.2s;
+    color: black;
+    transform: scale(0.98);
+  }
+}

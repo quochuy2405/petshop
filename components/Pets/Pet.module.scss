@@ -1,0 +1,68 @@
+@use '../../styles/abstracts/mixins' as *;
+.btnRegister {
+  width: 100px;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, white 50%, var(--color-base) 50%) left;
+  background-size: 200%;
+  transition: all linear 0.2s;
+  &:hover {
+    background-position: 100%;
+    transition: all linear 0.2s;
+    color: white;
+    transform: scale(0.98);
+  }
+}
+.description {
+  font-size: 0.9rem;
+  padding: 10px;
+}
+.course {
+  margin: 0 auto;
+  min-width: 345px;
+  flex-basis: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include responsive('md') {
+    min-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.title {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: normal;
+  @include responsive('sm') {
+    font-size: 1.1rem;
+  }
+  @include responsive('md') {
+    font-size: 1.3rem;
+  }
+}
+.CardImage {
+  display: block;
+  height: 160px;
+}
+.groupBtnPet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

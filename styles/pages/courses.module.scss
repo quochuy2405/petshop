@@ -1,0 +1,106 @@
+@use '../../styles/abstracts/mixins' as *;
+.heading {
+  text-align: center;
+}
+.overView {
+  padding: 50px;
+  background-color: var(--color-page-background);
+  display: flex;
+  height: calc(100vh - var(--header-height));
+  @include responsive('md') {
+    flex-direction: column;
+    height: auto;
+    padding: 50px 0;
+    margin: 0 auto;
+  }
+}
+.overViewText {
+  flex: 3;
+  justify-self: center;
+  align-self: center;
+  padding: 5%;
+  @include responsive('lg') {
+    padding: 3%;
+  }
+  .overViewTitle {
+    font-size: 3rem;
+    line-height: normal;
+    font-weight: 700;
+    @include responsive('md') {
+      font-size: 2rem;
+    }
+    @include responsive('sm') {
+      font-size: 2rem;
+    }
+  }
+}
+.overViewImage {
+  flex: 2;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.overViewListCourse {
+  width: 80%;
+  margin: 100px auto;
+  @include responsive('md') {
+    width: 90%;
+    margin: 40px auto;
+  }
+}
+.titleList {
+  p {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 30px 10px;
+    width: 50%;
+    line-height: normal;
+    @include responsive('md') {
+      width: 90%;
+      margin: 20px auto;
+    }
+  }
+}
+.welcome {
+  width: 70%;
+  height: 60vh;
+  margin: 100px auto;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--color-base);
+  border-radius: 40px;
+  opacity: 0.9;
+  .welcomeContent {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    .welcomeTitle {
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: normal;
+    }
+    .welcomeDescription {
+      font-size: 1rem;
+    }
+  }
+
+  .imgContent {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

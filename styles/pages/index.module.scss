@@ -1,0 +1,205 @@
+@use '../../styles/abstracts/mixins' as *;
+.heading {
+  text-align: center;
+}
+.overView {
+  padding: 50px;
+  display: flex;
+  height: calc(100vh - var(--header-height));
+  @include responsive('md') {
+    flex-direction: column;
+    height: auto;
+    padding: 50px 0;
+    margin: 0 auto;
+  }
+  .overViewText {
+    justify-self: center;
+    align-self: center;
+    width: 50%;
+    padding: 5%;
+    text-transform: capitalize;
+    font-family: var(--font-mouse);
+    font-size: 1.2rem;
+    position: relative;
+
+    @include responsive('lg') {
+      padding: 3%;
+    }
+    .overViewTitle {
+      font-size: 5rem;
+      line-height: normal;
+      font-weight: 700;
+      @include responsive('md') {
+        font-size: 2.8rem;
+      }
+      @include responsive('sm') {
+        font-size: 2.6rem;
+      }
+    }
+  }
+  .overViewImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.overViewListCourse {
+  width: 85%;
+  margin: 100px auto;
+  @include responsive('md') {
+    width: 90%;
+    margin: 40px auto;
+  }
+}
+.titleList {
+  p {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 30px 10px;
+    padding: 0 10px;
+    width: 50%;
+    line-height: normal;
+    @include responsive('md') {
+      width: 100%;
+      margin: 0;
+      font-size: 2rem;
+    }
+  }
+}
+.serviceCategory {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 40px;
+
+  $colors: #ffa8a8be, #ffe4b2cd, #ffffb1d4, #cdffcdc5, #c4c4ffa8, #fc8efc;
+
+  @for $i from 1 through length($colors) {
+    .service:nth-child(#{length($colors)}n + #{$i}) {
+      background: nth($colors, $i);
+    }
+  }
+  .service {
+    min-width: 200px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 1px 3px var(--color-base);
+    border-radius: 100rem;
+  }
+}
+.welcome {
+  width: 80%;
+  height: 300px;
+  margin: 100px auto;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--color-base);
+  border-radius: 40px;
+  padding: 0 40px;
+  opacity: 0.9;
+  @include responsive('lg') {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .welcomeContent {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    @include responsive('md') {
+      padding: 5px;
+    }
+    .welcomeTitle {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: normal;
+      display: -webkit-box;
+
+      @include responsive('sm') {
+        font-size: 1.5rem;
+      }
+      @include responsive('md') {
+        font-size: 2rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .welcomeDescription {
+      font-size: 0.8rem;
+      font-weight: 400;
+      width: 80%;
+      @include responsive('sm') {
+        font-size: 0.7rem;
+      }
+      @include responsive('md') {
+        font-size: 0.7rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .imgContent {
+    height: 250px;
+    width: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    justify-content: center;
+    background-color: white;
+    border-radius: 100rem;
+    box-shadow: 0 0 0px 20px rgba(255, 251, 244, 0.353);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+.btnRegister {
+  box-shadow: 0 0 0px 2px var(--color-base);
+  border-radius: 6px;
+  color: white;
+
+  background: linear-gradient(to right, var(--color-base) 50%, white 0%) left;
+  background-color: var(--color-base);
+  background-size: 200%;
+  transition: all linear 0.2s;
+  &:hover {
+    background-position: 100%;
+    transition: all linear 0.2s;
+    color: black;
+    transform: scale(0.98);
+  }
+}
+.btnRegister {
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  margin: auto 0;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 600;
+  margin: 20px 0;
+}

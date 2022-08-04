@@ -1,0 +1,26 @@
+@use '../../styles/abstracts/mixins' as *;
+.cellHeader {
+  color: white !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 10px;
+  @include responsive('md') {
+    font-size: 1.5rem;
+  }
+}
+.tableContainer {
+  width: 75% !important;
+  height: 60vh;
+  margin: 50px auto;
+  @include responsive('md') {
+    width: 95% !important;
+    height: 80vh;
+    margin: 30px auto;
+  }
+}
