@@ -24,7 +24,7 @@ const Register: NextPage = () => {
             <p className={Styles.overViewTitle}>{overview.title} </p>
             <p className={Styles.overViewDescription}>{overview.description}</p>
             <Link href={'/register'}>
-              <p className={Styles.btnRegister}> {btn.register}</p>
+              <p className={Styles.btnRegister}> {btn.buy}</p>
             </Link>
           </div>
           <div className={Styles.overViewImage}>
