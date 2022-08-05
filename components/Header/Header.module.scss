@@ -54,13 +54,17 @@
   display: flex;
   justify-content: center;
 
-  gap: 80px;
+  gap: 5%;
 
   a {
     color: #000;
     text-decoration: none;
     font-weight: 500;
     white-space: nowrap;
+  }
+  @include responsive('lg') {
+    gap: 5%;
+    font-size: 1.1rem;
   }
 }
 .btnGroup {
@@ -87,9 +91,6 @@
     color: white;
     transform: scale(0.98);
   }
-  // @include responsive('md') {
-  //   display: none;
-  // }
 }
 
 .btnLogin {

@@ -29,7 +29,7 @@ const SET = {
     count:"Registed"
   },
   home_page: {
-    findTheCourse: "Find The Course",
+    findTheCourse: "Find The Pets",
     developQualityTitle: "Develop Your Quality",
     developQualityDes: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime eligendi ex voluptatem aut consectetur hic vitae esse odio tempora",
     titleService:'Service Category'

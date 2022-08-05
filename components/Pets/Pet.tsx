@@ -36,20 +36,19 @@ function Pet({ name, description, max_vol, current_vol, class_code, thumbnail }:
   return (
     <Card className={Styles.course}>
       <CardMedia component="img" className={Styles.CardImage} image={url || link} alt={name} />
-      <p className={Styles.title}>{name}</p>
+
       <div>
-        <p className={Styles.description}>
-          {description}
-          <p className={Styles.contentNumber}></p>
-          <div className={Styles.groupBtnPet}>
-            <div className={Styles.btnRegister} onClick={() => gotoRegister()}>
-              {btn.buy}
-            </div>
-            <div className={Styles.btnRegister} onClick={() => gotoRegister()}>
-              {btn.details}
-            </div>
+        <p className={Styles.title}>{name}</p>
+        <p className={Styles.description}>{description}</p>
+        <p className={Styles.price}>2.000.000 VNĐ</p>
+        <div className={Styles.groupBtnPet}>
+          <div className={Styles.btnRegister} onClick={() => gotoRegister()}>
+            {btn.buy}
           </div>
-        </p>
+          <div className={Styles.btnRegister} onClick={() => gotoRegister()}>
+            {btn.details}
+          </div>
+        </div>
       </div>
     </Card>
   )

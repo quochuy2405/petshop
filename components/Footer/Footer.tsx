@@ -13,7 +13,7 @@ const Footer = (): JSX.Element => {
             </p>
             <li>Phone number: 09636392012</li>
             <li>Email: contactmsquynh@gmail.com</li>
-            <li>Address: Xã Ia Sươm - Krông Pa - Gia Lai</li>
+            <li>Address: KTX Khu A - ĐHQG,Linh Trung, Thu Duc, TPHCM</li>
           </ul>
         </div>
         <div className={Styles.infoAbout}>

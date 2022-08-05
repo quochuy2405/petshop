@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
-import { Footer, Header, ListCourse, Metadata } from '@/components'
+import { Footer, Header, ListPets, Metadata } from '@/components'
 import { AppCtx } from '@/Context/GlobalContext'
 import { getCourses } from '@/firebase'
 import { getLanguage } from '@/i18-next'
@@ -7,7 +7,7 @@ import Styles from '@/styles/pages/index.module.scss'
 import type { Course } from '@/types/interface'
 import type { NextPage } from '@/types/next'
 import Image from 'next/image'
-import Hero from '@/public/hero.png'
+import Hero from '@/public/hero.svg'
 import Shetland from '@/public/shetland.png'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -72,7 +72,7 @@ const Home: NextPage = () => {
           <div className={Styles.titleList}>
             <p>{home_page.findTheCourse}</p>
           </div>
-          <ListCourse size={6} list={courses} />
+          <ListPets size={6} list={courses} />
         </div>
         <div className={Styles.welcome}>
           <div className={Styles.welcomeContent}>

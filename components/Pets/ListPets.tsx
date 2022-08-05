@@ -4,7 +4,7 @@ import type { Course as TCourse } from '@/types/interface'
 import { Box, Skeleton } from '@mui/material'
 import { useContext } from 'react'
 import Pet from './Pet'
-import Styles from './ListCourse.module.scss'
+import Styles from './ListPets.module.scss'
 
 interface Courses {
   size?: number

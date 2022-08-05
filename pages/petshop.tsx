@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
-import { Footer, Header, ListCourse, Metadata } from '@/components'
+import { Footer, Header, ListPets, Metadata } from '@/components'
 import { AppCtx } from '@/Context/GlobalContext'
 import { getCourses } from '@/firebase'
 import { getLanguage } from '@/i18-next'
@@ -32,16 +32,14 @@ const Courses: NextPage = () => {
           <div className={Styles.overViewText}>
             <p className={Styles.overViewTitle}>{course_page.title} </p>
           </div>
-          <div className={Styles.overViewImage}>
-            <img src={'https://teachenglish.vus.edu.vn/wp-content/uploads/2022/04/Group-12816@2x.jpg'} alt="" />
-          </div>
+          <div className={Styles.overViewImage}></div>
         </div>
 
         <div className={Styles.overViewListCourse}>
           <div className={Styles.titleList}>
             <p>{course_page.findTheCourse}</p>
           </div>
-          <ListCourse list={courses} />
+          <ListPets list={courses} />
         </div>
       </div>
       <Footer />
