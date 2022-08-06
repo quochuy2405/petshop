@@ -10,9 +10,9 @@ import { useRouter } from 'next/router'
 import { useContext, useEffect, useState } from 'react'
 import Styles from './Pet.module.scss'
 
-const link = 'https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2019/10/23170637/Graphic-Design-Courses.jpg'
+const link = 'https://i.pinimg.com/564x/4f/37/8c/4f378c256083a7647016baba99716548.jpg'
 
-function Pet({ name, description, max_vol, current_vol, class_code, thumbnail }: TCourse): JSX.Element {
+function Pet({ name, description, thumbnail, info, pet_code, vol, type_pet, price }: TCourse): JSX.Element {
   const router = useRouter()
   const { locale } = router
   const { courses, btn } = getLanguage(locale || 'vi')
@@ -27,7 +27,7 @@ function Pet({ name, description, max_vol, current_vol, class_code, thumbnail }:
   }, [thumbnail])
   const gotoRegister = () => {
     if (user.userId) {
-      router.push(`/register-form?classid=${class_code}`)
+      router.push(`/register-form?classid=${pet_code}`)
     } else {
       setLogin(true)
     }
@@ -40,7 +40,10 @@ function Pet({ name, description, max_vol, current_vol, class_code, thumbnail }:
       <div>
         <p className={Styles.title}>{name}</p>
         <p className={Styles.description}>{description}</p>
-        <p className={Styles.price}>2.000.000 VNĐ</p>
+        <p className={Styles.description}>From: {info}</p>
+        <p className={Styles.description}>Type: {type_pet}</p>
+        <p className={Styles.description}>Quantity: {vol}</p>
+        <p className={Styles.price}>{price} VNĐ</p>
         <div className={Styles.groupBtnPet}>
           <div className={Styles.btnRegister} onClick={() => gotoRegister()}>
             {btn.buy}

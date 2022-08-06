@@ -3,14 +3,16 @@ import type { AlertColor } from '@mui/material'
 interface Course {
   name: string
   description?: string
-  max_vol?: number
-  current_vol?: number
-  class_code: string
-  thumbnail: string
-  date_open: string
-  created_date: string
-  status?: number
-  student_name?: string
+  info: string
+  address?: string
+  type_pet?: string
+  pet_code: string
+  thumbnail?: string
+  image1?: string
+  image2?: string
+  vol: number
+  date_sale?: string
+  price: string
 }
 interface Student {
   name: string

@@ -48,7 +48,7 @@ const courseConverter: FirestoreDataConverter<Course> = {
 }
 // Get a list of cities from your database
 const getCourses = async () => {
-  const citiesCol = collection(db, 'courses').withConverter(courseConverter)
+  const citiesCol = collection(db, 'pets').withConverter(courseConverter)
   const citySnapshot = await getDocs(citiesCol)
   const cityList = citySnapshot.docs.map((doc) => doc.data())
   const listCourses = cityList.reduce((list: Array<Course>, itemCurrent) => {
@@ -69,14 +69,14 @@ const createStudent = async (student: Student) => {
       return false
     }
     const queryCheckStudent = query(
-      collection(db, 'students'),
+      collection(db, 'customers'),
       where('user_id', '==', student.user_id),
-      where('class_code', '==', student.class_code),
+      where('pet_code', '==', student.class_code),
       where('name', '==', student.name)
     )
     const studentIsExit = await getDocs(queryCheckStudent)
     if (!studentIsExit.size) {
-      const cityRef = doc(db, 'students', student.class_code + autoGenerateId())
+      const cityRef = doc(db, 'customers', student.class_code + autoGenerateId())
       await setDoc(cityRef, student)
       return true
     } else {
@@ -100,8 +100,8 @@ const getCourseById = async (user: Partial<User>) => {
       const courses = await getDocs(getCourse)
       if (courses.docs.at(0)) {
         const course: Course = <Course>courses.docs.at(0)?.data()
-        course.status = student?.status
-        course.student_name = student?.name
+
+        course.name = student?.name
         if (course) courseStudent.push(course)
       }
     }
