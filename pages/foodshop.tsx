@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
-import { Footer, Header, ListCourse, Metadata } from '@/components'
+import { Footer, Header, ListPets, Metadata } from '@/components'
 import { AppCtx } from '@/Context/GlobalContext'
 import { getCourses } from '@/firebase'
 import { getLanguage } from '@/i18-next'
@@ -41,7 +41,7 @@ const Courses: NextPage = () => {
           <div className={Styles.titleList}>
             <p>{course_page.findTheCourse}</p>
           </div>
-          <ListCourse list={courses} />
+          <ListPets list={courses} />
         </div>
       </div>
       <Footer />

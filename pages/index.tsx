@@ -41,6 +41,9 @@ const Home: NextPage = () => {
               <p className={Styles.btnRegister}> {btn.buy}</p>
             </Link>
           </div>
+          <div>
+            <Image src={Shetland} alt={'pet'} style={{ objectFit: 'contain', transform: 'scale(0.8)' }} />
+          </div>
           <div className={Styles.overViewImage}>
             <Image src={Hero} alt={'Hero'} />
           </div>
@@ -72,7 +75,7 @@ const Home: NextPage = () => {
           <div className={Styles.titleList}>
             <p>{home_page.findTheCourse}</p>
           </div>
-          <ListPets size={6} list={courses} />
+          <ListPets size={10} list={courses} />
         </div>
         <div className={Styles.welcome}>
           <div className={Styles.welcomeContent}>

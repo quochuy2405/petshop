@@ -3,16 +3,16 @@ import { Footer, Header, Metadata } from '@/components'
 import { AppCtx } from '@/Context/GlobalContext'
 import { getCourseById } from '@/firebase'
 import { getLanguage } from '@/i18-next'
+import Styles from '@/styles/pages/progress.module.scss'
 import type { Course } from '@/types/interface'
 import type { NextPage } from '@/types/next'
-import { Box, Button, IconButton, Skeleton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
+import { Box, Button, Skeleton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
 import { useRouter } from 'next/router'
 import { useContext, useEffect, useState } from 'react'
-import { VscTrash } from 'react-icons/vsc'
-import { BsCheck2Circle } from 'react-icons/bs'
 import { AiOutlineFieldTime } from 'react-icons/ai'
+import { BsCheck2Circle } from 'react-icons/bs'
 import { SiGoogletagmanager } from 'react-icons/si'
-import Styles from '@/styles/pages/progress.module.scss'
+import { VscTrash } from 'react-icons/vsc'
 
 const Register: NextPage = () => {
   const { locale } = useRouter()
@@ -62,14 +62,14 @@ const Register: NextPage = () => {
                 {listCourse.map((course: Course) => (
                   <TableRow key={course?.name} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                     <TableCell component="th" scope="row">
-                      {course?.class_code}
+                      {course?.pet_code}
                     </TableCell>
 
                     <TableCell>{course?.name}</TableCell>
-                    <TableCell>{course?.student_name}</TableCell>
-                    <TableCell>{course?.date_open}</TableCell>
+                    <TableCell>{course?.name}</TableCell>
+                    <TableCell>{course?.name}</TableCell>
                     <TableCell>
-                      {course?.status ? (
+                      {course?.name ? (
                         <Button variant="outlined" color="success" disableFocusRipple startIcon={<BsCheck2Circle />}>
                           {progress_page?.button?.accept}
                         </Button>
