@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
-import { Footer, Header, ListCourse, Metadata } from '@/components'
+import { Footer, Header, ListPets, Metadata } from '@/components'
 import { getLanguage } from '@/i18-next'
 import Styles from '@/styles/pages/index.module.scss'
 import type { Course } from '@/types/interface'
@@ -36,7 +36,7 @@ const Register: NextPage = () => {
           <div className={Styles.titleList}>
             <p>{home_page.findTheCourse}</p>
           </div>
-          <ListCourse size={6} list={listCourse} />
+          <ListPets size={10} list={listCourse} />
         </div>
         <div className={Styles.welcome}>
           <div className={Styles.welcomeContent}>
