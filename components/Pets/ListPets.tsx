@@ -25,7 +25,7 @@ function ListCourse({ size, list }: Courses): JSX.Element {
               </Box>
             </Box>
           ))
-        : list?.slice(0, size)?.map((item) => <Pet {...item} key={item.name + item.description} />)}
+        : list?.slice(0, size)?.map((item) => <Pet {...item} key={item.pet_code} />)}
     </div>
   )
 }

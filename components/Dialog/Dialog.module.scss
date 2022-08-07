@@ -1,0 +1,48 @@
+@use '../../styles/abstracts/mixins' as *;
+.loginGG,
+.loginFB {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 40%;
+  height: 40px;
+  gap: 10px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: all linear 0.2s;
+  font-family: var(--font-mouse);
+  font-size: 2rem;
+}
+.loginFB {
+  background-color: var(--color-green);
+  color: #9e9e9e;
+  box-shadow: 0 0 0 2px rgb(205, 204, 204);
+  &:hover {
+    opacity: 1;
+    transition: all linear 0.2s;
+    box-shadow: 0 0 0 2px rgb(38, 38, 38);
+  }
+}
+.loginGG {
+  color: rgb(97, 97, 97);
+  background-color: #ececec;
+  box-shadow: 0 0 0 2px rgb(205, 204, 204);
+  &:hover {
+    background-color: white;
+    box-shadow: 0 0 0 2px rgb(38, 38, 38);
+    transition: all linear 0.2s;
+  }
+}
+.mobile {
+  @include responsive('md') {
+    display: none;
+  }
+}
+.title {
+  font-family: var(--font-mouse);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}

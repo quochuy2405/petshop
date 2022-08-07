@@ -75,7 +75,7 @@ const Home: NextPage = () => {
           <div className={Styles.titleList}>
             <p>{home_page.findTheCourse}</p>
           </div>
-          <ListPets size={10} list={courses} />
+          <ListPets size={8} list={courses} />
         </div>
         <div className={Styles.welcome}>
           <div className={Styles.welcomeContent}>

@@ -36,7 +36,7 @@ const Register: NextPage = () => {
           <div className={Styles.titleList}>
             <p>{home_page.findTheCourse}</p>
           </div>
-          <ListPets size={10} list={listCourse} />
+          <ListPets size={8} list={listCourse} />
         </div>
         <div className={Styles.welcome}>
           <div className={Styles.welcomeContent}>
